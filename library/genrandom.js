@@ -7,6 +7,7 @@ function secureRandom(max) {
 
   while (true) {
     crypto.getRandomValues(array);
+
     if (array[0] < limit) {
       return array[0] % max;
     }
@@ -24,9 +25,10 @@ function generateRandomString(length) {
 }
 
 document.getElementById("generateBtn").addEventListener("click", () => {
-  const length = parseInt(document.getElementById("length").value, 10);
 
-  if (isNaN(length) || length < 1 || length > 256) {
+  const length = Number(document.getElementById("length").value);
+
+  if (length < 1 || length > 256 || isNaN(length)) {
     alert("文字数は1～256で入力してください。");
     return;
   }
