@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>安全なランダム文字列生成</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    input {
+      width: 80px;
+      padding: 5px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin-left: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #0066cc;
+      word-break: break-all;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>安全なランダム文字列生成</h1>
+
+  <label>
+    文字数：
+    <input type="number" id="length" value="16" min="1" max="256">
+  </label>
+
+  <button id="generateBtn">生成</button>
+
+  <div id="result"></div>
+
+  <script src="../library/genrandom.js"></script>
+
+</body>
+</html>
